@@ -18,7 +18,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: "npm"
       - name: Install dependencies
         # install exact dependencies in the package json
         run: npm ci
@@ -38,7 +37,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: "npm"
       - name: Install dependencies
         # install exact dependencies in the package json
         run: npm ci
