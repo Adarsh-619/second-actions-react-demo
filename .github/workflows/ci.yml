@@ -11,13 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        # download the code using actions/checkout version 3
-        uses: actions/checkout@v3
-        # install Nodejs version 16 on the github action
+        # download the code using actions/checkout version 4
+        uses: actions/checkout@v4
+        # install Nodejs version 20 on the github action
       - name: Install Nodejs
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
       - name: Install dependencies
         # install exact dependencies in the package json
         run: npm ci
@@ -30,13 +31,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        # download the code using actions/checkout version 3
-        uses: actions/checkout@v3
-        # install Nodejs version 16 on the github action
+        # download the code using actions/checkout version 4
+        uses: actions/checkout@v4
+        # install Nodejs version 20 on the github action
       - name: Install Nodejs
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
       - name: Install dependencies
         # install exact dependencies in the package json
         run: npm ci
